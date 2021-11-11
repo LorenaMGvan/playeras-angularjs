@@ -1,0 +1,40 @@
+{
+  "name": "forms-playera",
+  "version": "1.0.0",
+  "description": "Es un pequeño ejercicio echo con angularjs donde personalizas tu playera y la añades al carrito: practicando: directivas rutas cotroladores cookies",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "start": "http-server -a localhost -p 8000 -o ./app",
+    "test": "karma start karma.conf.js"
+  },
+  6
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LorenaMGvan/playeras-angularjs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LorenaMGvan/playeras-angularjs/issues"
+  },
+  "homepage": "https://github.com/LorenaMGvan/playeras-angularjs#readme",
+  "devDependencies": {
+    "jasmine": "^3.9.0",
+    "karma": "^6.3.4",
+    "karma-chrome-launcher": "^3.1.0",
+    "karma-coverage": "^2.0.3",
+    "karma-jasmine": "^4.0.1",
+    "karma-jasmine-html-reporter": "^1.7.0"
+  },
+  "dependencies": {
+    "angular": "^1.8.2",
+    "angular-cookies": "^1.8.2",
+    "angular-mocks": "^1.8.2",
+    "angular-resource": "^1.8.2",
+    "angular-route": "^1.8.2",
+    "http-server": "^13.0.2"
+  }
+}

@@ -1,0 +1,87 @@
+fdescribe("Modulo shirtApp.carrito", function() {
+
+  //module.sharedInjector();
+  //angular.mock.module.sharedInjector();  
+  // Simular nuestro módulo de aplicación e inyectar nuestra propia dependencia.
+
+  beforeAll(angular.mock.module('ngCookies', 'shirtApp.carrito'));
+  
+
+  describe('*Carrito*', function() {
+
+    //let $controller, $rootScope, $scope, cookies,  filter,  location,  log,  FacPaises;  
+  let $controller;
+  let $rootScope;
+  let $scope;
+  let cookies;
+  let filter;
+  let location;
+  let log;
+  let FacPaises;  
+
+  // simular el controlador e incluir $ rootscope y $ controlador
+  beforeAll(angular.mock.inject(function(_$controller_, _$scope_ , _$rootScope_, _$cookies_ , _$filter_ , _$location_ , _$log_ , _FacPaises_) {
+    $controller = _$controller_;
+    $rootScope = _$rootScope_;
+    //$scope  = _$scope_;
+    cookies  = _$cookies_;
+    filter  = _$filter_;
+    location  = _$location_;
+    log  = _$log_;
+    FacPaises = _FacPaises_;      
+    // $scope = $rootScope.$new();
+    // $controller = $controller('cartCtrl', { $scope: $scope });
+
+  }));
+
+
+    it('should say \'Hello World\'', function() {
+      $scope = $rootScope.$new();
+      // $controller takes an  object containing a reference to the $scope
+      $controller = $controller('cartCtrl', { $scope: $scope });
+      // the assertion checks the expected result
+      expect($scope.title).toEqual('Hello World');
+    });
+  });
+
+
+    
+  //   it('controllador carCtrl definido', function() {      
+  //     $scope = $rootScope.$new();
+  //     $controller = $controller('cartCtrl', { $scope: $scope });
+  //     expect(controller).toBeDefined();      
+  //   });
+
+  //  });
+
+  // describe('view2 controller', function(){
+
+  //   it('should ....', inject(function() {
+  //     //spec body
+  //     // var view2Ctrl = $controller('cartCtrl');
+  //     // expect(view2Ctrl).toBeDefined();
+  //   }));
+
+  // });
+
+
+  // it('1 + 1 should equal 2', function(){
+  //   var actual = _mathservice.addTwoNumbers(1,1);
+  //   expect(actual).toEqual(2);
+  // });
+
+  // it("has calculated the answer correctly", inject(function(DeepThought) {
+  //   // Because of sharedInjector, we have access to the instance of the DeepThought service
+  //   // that was provided to the beforeAll() hook. Therefore we can test the generated answer
+  //   expect(DeepThought.answer).toBe(42);
+  // }));
+
+  // it("has calculated the answer within the expected time", inject(function(DeepThought) {
+  //   expect(DeepThought.runTimeMillennia).toBeLessThan(8000);
+  // }));
+
+  // it("has double checked the answer", inject(function(DeepThought) {
+  //   expect(DeepThought.absolutelySureItIsTheRightAnswer).toBe(true);
+  // }));
+
+});

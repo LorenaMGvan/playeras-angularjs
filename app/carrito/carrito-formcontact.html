@@ -1,0 +1,102 @@
+<form name="formbuy" class="text-center" ng-submit="buy()" novalidate>   
+
+    <div ng-show="tatusApiCountry.length" class="apicountrys text-center alert alert-danger" >        
+        <h3>Se require la API de paises para:</h3>
+        <h5>* campo de Pais</h5>
+        <h5>* campo de código de Teléfono</h5>        
+        <h6>{{ statusApiCountry.length }}</h6>
+    </div>
+                
+    <div class="form-group--col">
+        <div class="form-control">
+            <label class="form-label">Nombre</label>
+            <input type="text" class="form-control-text" 
+                    name="names" 
+                    ng-model="user.name" 
+                    required="required" />
+        </div>
+
+        <div class="form-control">
+            <label class="form-label">Apellido</label>
+            <input type="text" 
+                class="form-control-text" 
+                name="lastname"  
+                ng-model="user.lastname" 
+                required="required" />
+        </div>
+    </div>     
+    
+    <div class="form-group--col">
+        <div class="form-control form-control--pais">
+            <label class="form-label">País</label>
+            <div class="wrap-select">                
+                <select 
+                    name="pais"            
+                    id="select-pais"                                          
+                    ng-options="item as item.name for item in paisesOpc track by item.isoCode"                                
+                    ng-model="user.pais"                                                              
+                    ng-change="selectCountryUser()"
+                    required="required">                    
+                </select>
+            </div>
+        </div>
+
+        <div class="form-control">
+            <label class="form-label">Estado</label>
+            <div class="wrap-select">                
+                <select 
+                    name="statecountry"            
+                    id="select-statecountry"                                          
+                    ng-options="item as item.name for item in statescontryOpc track by item.isoCode"                                
+                    ng-model="user.statecountry"                                                              
+                    ng-change="selectStateUser()"
+                    required="required">                    
+                </select>                
+            </div>
+        </div>
+    </div>           
+    
+    <div class="form-group--col">
+        <div class="form-control">
+            <label class="form-label">Email</label>
+            <input type="email" 
+                class="form-control-text"
+                 name="email"
+                 ng-model="user.email"
+                 ng-pattern="/^[a-z]+[a-z0-9._]+@[a-z]+\.[a-z.]{2,5}$/"                                 
+                 required="required"/>                 
+        </div>
+
+        <div class="form-control">
+            <label class="form-label">Teléfono</label>            
+            <div class="form-control--phone">                
+            
+                <div class="form-control-text phonecodes-list">
+                     {{ countryPhoneCode }}
+                </div>                
+
+                <input type="text" 
+                    class="form-control-text" 
+                    name="phone" 
+                    ng-model="user.phone"                                
+                    field-number                    
+                    ng-maxlength="10"         
+                    required="required" 
+                     />                                           
+            </div>            
+        </div>
+    </div>         
+    <br>  
+    
+    <a class="btn btn-secondary"
+        ng-click="buttoncancel()">
+        Regresar al Carrito
+    </a>             
+            
+    <button id="buttonpay" 
+            class="btn btn-primary"
+            ng-disabled="formbuy.$invalid">
+            Pagar con
+            <img src="img/mercadopago.svg" alt="" width="80">
+    </button>                
+ </form>

@@ -1,0 +1,38 @@
+  .option-input {
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    border: none;
+    bottom: 0;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    height: 20px;
+    left: 0;
+    margin-right: 0.5rem;
+    outline: none;
+    padding: 0;
+    position: relative;
+    right: 0;
+    top: 0;
+    transition: all 0.15s ease-out 0s;
+    width: 20px;
+    z-index: 10;
+  }
+  
+  .option-input:checked::after {   
+    background: #000;
+    content: '';
+    display: block;
+    position: relative;
+    z-index: 100;    
+  }
+
+  .option-input.radio {
+    border-radius: 50%;
+  }
+  .option-input.radio::after {
+    border-radius: 50%;
+  }

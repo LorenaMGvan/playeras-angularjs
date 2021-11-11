@@ -1,0 +1,53 @@
+
+<main class="main-shirt">
+    <div class="description-top" ng-include="'./description.html'"></div>
+
+    <div class="content">
+        
+        <div>
+            <figure class="wrapp-shirt" id="captureprev">                    
+                <img ng-src="{{ shirt.imgpreview }}" alt="" class="img-responsive">
+                <figcaption class="shirt-caption font-custom-roboto" ng-style="prevInitShirt">
+                    {{ shirt.messagetest }}
+                </figcaption>
+            </figure>  
+            <h2 class="text-center">{{ precio | currency }}</h2>            
+        </div>
+
+
+        <section class="wrapp-form">
+
+            <form name="formPlayera"
+                class="custom-shirt"
+                ng-submit="submitCustomShirt(shirt)"
+                novalidate>
+
+                <tabs-gral>
+
+                    <content-tab dat-heading='Frase' dat-tab-active>                               
+                        <div class="tab-item" ng-include="'playera/tab1.html'"></div>                                
+                    </content-tab>
+
+                    <content-tab dat-heading='Talla'>                                
+                        <div class="tab-item" ng-include="'playera/tab2.html'"></div>
+                    </content-tab>
+
+                    <content-tab dat-heading='Materiales'>                                
+                        <div class="tab-item" ng-include="'playera/tab3.html'"></div>
+                    </content-tab>
+
+                </tabs-gral>
+
+                <button type="submit"
+                    id="sendshirt"
+                    class="btn btn-primary"
+                    ng-disabled="formPlayera.$invalid">
+                    Añadir al carrito
+                </button>
+
+            </form>
+
+        </section>
+    </div>
+
+</main>

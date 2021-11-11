@@ -1,0 +1,64 @@
+<div class="form-group--first">        
+    <div class="form-control form-group--radio form-group--colortext">                    
+        <label for="colortext" class="form-label">Color del texto</label>
+        <input type="color" 
+            name="colortext"
+            id="colortext" 
+            class="form-control form-control-color" 
+            value="#dddddd"
+            ng-model="shirt.colortext"
+            ng-change="changeColorText()">                                              
+    </div>
+
+    <div class="form-control form-group--radio form-control--color">
+        <label class="form-label">Color de prenda</label>
+
+        <group-radios group-type="color">                   
+            <group-radios-item class="radio-on" id="color-negro" value="negro" mod-radio="shirt.color"  id-radio="color">Negro</group-radios-item>
+            <group-radios-item id="color-blanco" value="blanco" mod-radio="shirt.color" id-radio="color">Blanco</group-radios-item>                  
+        </group-radios>        
+    </div>    
+</div>
+
+<div class="form-control form-control--tipografia">
+    <label class="form-label">Tipografía</label>
+    <div class="wrap-select">
+        <select name="tipografia"            
+            id="select-typoshirt"
+            ng-model="shirt.tipografia"
+            ng-change="changeTypoShirt()"
+            required="required">
+            <option value="roboto">Roboto</option>
+            <option value="oswald">Oswald</option>
+            <option value="allison">Allison</option>
+        </select>
+    </div>
+</div>
+
+<div class="form-control form-control--sizetext">
+    <label class="form-label">Tamaño de texto: {{ shirt.sizetext }}</label>
+    <input name="sizetext" type="range"
+            class="form-range" min="10" max="30"
+            step="2" 
+            value="shirt.sizetext"
+            ng-model="shirt.sizetext"
+            ng-change="changeSizeText()"
+            required="required">
+</div>
+
+
+<div class="form-control form-control--message">
+    <label class="form-label">Escribe tu mensaje</label> <br>
+        
+    <textarea name="messagetest"
+        class="form-control-textarea"
+        cols="30" 
+        rows="3"
+        maxlength="15"
+        ng-model="shirt.messagetest"
+        ng-minlength="3" 
+        ng-maxlength="15"
+        required="required">
+    </textarea>
+    <p class="help">Mínimo 3 carácteres y Máximo 15 carácteres</p>
+</div>

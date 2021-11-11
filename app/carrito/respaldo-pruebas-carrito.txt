@@ -1,0 +1,84 @@
+describe('Test Carrito', function() {
+
+  let $compile, FacPaises, $httpBackend;
+  
+  beforeEach(angular.mock.module('ngCookies', 'shirtApp.carrito'));
+
+  //our code uses JSData for data storage. Let's mock out the objects.
+  // beforeAll(inject(function(FacPaises) {
+    // expect(DeepThought.answer).toBeUndefined();
+    // DeepThought.generateAnswer();
+  //}));
+
+  describe('Probando Controlador cartCtrl', function() {
+
+      // let FacPaises = {
+      //   getCountrys: function() {
+      //       return {};
+      //   }
+      // };
+       // notice how we are simply mocking services
+  
+      beforeEach(
+        angular.mock.inject(function($rootScope, $controller, _$compile_, _$httpBackend_, _FacPaises_) {
+        
+        scope = $rootScope.$new();
+        //$compile_ = _$compile_; 
+        // $httpBackend = _$httpBackend_;
+        // FacPaises = _FacPaises_;
+        
+        ctrl = $controller('cartCtrl', {
+                            $scope: scope,
+                            //FacPaises: FacPaises
+                          });
+        }));
+
+
+      // describe('findAll method', function(){
+      //   it('finds many cartItems', function(){
+      //     $httpBackend.expectGET('js/country.json').respond([{}]);
+      //     FacPaises.getCountrys();
+      //     $httpBackend.flush();
+      //   });
+      // });
+
+
+      // it("should return movie search data from the title", function() {
+      //   var response = [];
+    
+      //   $httpBackend.when('GET', 'js/country.json')
+      //     .respond(200, getCountrys);
+    
+      //   FacPaises.getData()
+      //     .then(function onSuccess(data) {
+      //       response = data;
+      //     });
+    
+      //   $httpBackend.flush();
+    
+      //   expect(response.data).toEqual(getCountrys);
+      // });
+
+
+      // beforeEach(inject(function (_FacPaises_, _$httpBackend_) {
+      //   FacPaises = _FacPaises_;
+      //   $httpBackend = _$httpBackend_;
+      // }));
+
+
+      // it('Replaces the element with the appropriate content', function() {
+      //   // Compile a piece of HTML containing the directive
+      //   var element = $compile("<a-great-eye></a-great-eye>")($rootScope);
+      //   // fire all the watches, so the scope expression {{1 + 1}} will be evaluated
+      //   $rootScope.$digest();
+      //   // Check that the compiled element contains the templated content
+      //   expect(element.html()).toContain("lidless, wreathed in flame, 2 times");
+      // });
+
+      // it('should sddshave Teléfono property defined', function () {
+      //     expect(scope.message).toBe("Hello angular");
+      // });
+
+  });
+ 
+});

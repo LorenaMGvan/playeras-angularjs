@@ -1,0 +1,68 @@
+<main class="main-cart" ng-controller="cartCtrl">
+    
+    <div class="content-cart--empty text-center" ng-show="cart.length == 0">
+        <div class="rounded-circle mb-5">
+            <img src="img/empty-cart.png" alt="" width="90" />
+        </div>
+        <h2>Tu carrito esta vacío</h2>
+        <a class="btn btn-primary mb-5" href="#!/playera">Agregar Playera</a>
+    </div>    
+    <div class="content-cart--full" ng-show="cart.length >= 1">
+        <br>
+        <h2 class="title">¡Carrito! </h2>                
+    
+        <div class="content">
+            <section class="wrapp-cart" ng-hide="readybuy">                                                         
+                <div ng-show="item.qty" id="{{ item.id }}" class="product" ng-repeat="item in cart">                
+                    <img ng-src="{{ item.imgpreview }}" alt="" width="120" height="80" class="product-thumb">
+                    <div class="product-right">
+                        <h3>
+                            <span>Playera Básica</span>
+                            <a href="" class="button-remove" ng-click="removePlayera(item.id)"></a>
+                        </h3>
+                        <ul>                        
+                            <li>Precio: {{ precio | currency }}</li>
+                            <li>Cantidad: 1</li>                        
+                        </ul>
+    
+                        <div class="product-info-bottom">
+                            <div class="product-quantity-price">
+                                    <div class="product-quantity">
+                                            <div class="item-quantity-minicart">
+                                                    <span class="qtybtn decrement-quantity" ng-click="customqty( item,'minus')">–</span>
+                                                    <span class="current-quantity">{{ item.qty }}</span>
+                                                    <span class="qtybtn increment-quantity" ng-click="customqty( item ,'plus')">+</span>
+                                            </div>
+    
+                                            <div class="product-price">
+                                                    <span class="num-units">{{ item.qty }}x</span>
+                                                    <span class="format-price">{{ item.subtotal }}</span>
+                                            </div>
+                                    </div>                                
+                            </div>
+                        </div>
+                    </div>               
+                 </div>              
+                 <div class="text-center">                
+                    <button type="submit" class="btn btn-primary" ng-click="addCart()">Continuar</button>
+                 </div>
+            </section>
+    
+            <section class="total">
+                <h3>Total: <span> {{ total | currency }}</span></h3>
+            </section>
+    
+            <section class="wrap-contact" ng-show="readybuy && !endbuy" ng-include="'carrito/carrito-formcontact.html'">                        
+            </section> 
+
+            <section class="wrap-success" ng-show="readybuy && endbuy">                        
+                <h5 class="alert alert-success text-center">
+                    ¡Tu compra esta lista!
+                    <br>
+                    Espero que te sea útil..
+                </h5>
+            </section> 
+        </div>
+    </div>
+</main>
+

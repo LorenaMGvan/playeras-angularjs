@@ -1,0 +1,220 @@
+img.img-responsive {
+    max-width: 100%;
+    height: 290px;
+    object-fit: cover;
+    object-position: center;
+}
+
+figure.wrapp-shirt {
+    border: solid 2px purple;
+    padding: 4px;
+    text-align: center;
+    position: relative;
+    height: 300px;
+}
+
+.wrapp-shirt h2 {
+    margin: 15px auto;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+#sendshirt {    
+    border: 0;        
+    margin: 25px 0;
+}
+
+.form-control {
+    margin-bottom: 10px;
+}
+
+
+/* .form-group-label label, 
+.form-group--radio label {
+    position: relative;
+    margin-right: 10px;
+    line-height: 0;
+} */
+
+.form-label {
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-align: left;
+    width: 100%;
+}
+
+.form-group--radio {
+    margin: 10px 0;
+}
+
+.form-group--radio label {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.form-group--radio span {
+    margin-left: 5px;
+}
+
+.option-input.radio {
+    margin: 0;
+}
+
+/* 
+.form-group-label {
+
+} */
+
+.wrap-select {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border: solid 1px #ddd;
+    min-height: 40px;
+}
+
+.wrap-select select {
+    background: rgba(0,0,0,0);
+    width: 100%;
+    height: 40px;
+    border: 0;
+}
+
+figure.wrapp-shirt figcaption {    
+    border: dashed 2px #b5b5b5;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    word-break: break-word;    
+}
+
+.form-control-text {
+    border: solid 1px #ddd;
+    margin-top: 10px;
+    min-height: 40px;
+    padding: 0 5px;
+    width: 100%;
+}
+
+.form-control-textarea {
+    width: 100%;
+}
+
+.form-control-textarea {
+    width: 100%;
+    border: solid 1px #ddd;
+    margin-top: 10px;
+}
+
+.form-group--radio .radio-on input {    
+    background: url('../img/cbimage.svg') no-repeat center / contain;
+}
+
+.form-group--radio input {
+    background: #ddd;
+}
+
+.help {
+    font-size: 12px;
+    color: #777;
+}
+
+hr {
+    border-width: 2px;
+    border-color: #eee;
+}
+
+.tabs-nav {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin-bottom: 0px;
+}
+
+.tabs-nav li {
+    border-radius: 5px 5px 0 0;
+    border: solid 1px #ddd;
+    border-bottom: 0;    
+    cursor: pointer;
+    overflow: hidden;
+    padding: 5px;
+}
+
+.tabs-nav li.active{
+    background: #f3cff3;    
+}
+
+.tabs-nav li a {
+    color: #000;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+.tabs-nav li.active a {
+    color: purple;
+}
+
+.tab-item {
+    border: solid 1px #ccc;
+    padding: 10px 15px;
+    background: #e1e1;
+}
+
+.custom-shirt .form-group--first {     
+    display: grid;
+    grid-template-columns: 2fr auto;
+}
+
+.custom-shirt .form-group--first {
+    display: grid;
+    grid-template-columns: 4fr 8fr;
+    grid-gap: 16px;
+}
+
+.font-custom-allison {
+    font-family: 'Allison', cursive;
+}
+
+.font-custom-roboto {
+    font-family: 'Roboto', sans-serif;    
+}
+
+.font-custom-oswald {
+    font-family: 'Oswald', sans-serif;
+}
+
+.description-top {
+    text-align: center;
+}
+
+.description-top ul {
+    width: auto;
+    display: inline-block;
+    margin: auto;
+}
+
+.description-top li {
+    text-align: left;
+}
+
+/* mobile */
+
+@media (min-width: 992px) {
+
+    .main-shirt .content {
+        display: grid;
+        grid-template-columns: 4fr 8fr;    
+    }    
+
+}
+
+
+
+
+

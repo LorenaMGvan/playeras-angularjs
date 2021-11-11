@@ -1,0 +1,192 @@
+.wrapp-cart .product {    
+    border: solid 1px #ddd;
+    display: grid;
+    grid-gap: 15px;
+    margin: 15px auto;
+    width: 200px;
+}
+
+.wrapp-cart h3 {    
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 18px; 
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;   
+}
+
+.product-thumb {        
+    height: 120px;
+    margin: auto;
+    object-fit: cover;
+    width: 140px;
+}
+
+.product-right {
+    padding: 10px;
+}
+
+.product-right ul {
+    padding: 0;
+}
+
+.product-right li {
+    list-style: none;
+    font-size: 14px;
+    line-height: 14px;
+    color: #777;
+}
+
+.button-remove {
+    background: url('../img/delete.svg') no-repeat center / 20px auto;    
+    display: block;
+    min-height: 20px;
+    min-width: 20px;
+    width: 20px;
+}
+
+.qtybtn {
+    min-width: 20px;
+    min-height: 20px;
+    background: #ddd;
+    display: inline-flex;
+    border-radius: 2px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;    
+}
+
+.qtybtn:hover {
+    background: #ffb012;
+}
+
+.current-quantity {
+    display: inline-flex;
+    min-width: 20px;
+    justify-content: center;
+}
+
+.product-price {
+    font-size: 14px;
+    line-height: 14px;
+    color: #777;
+}
+
+.product-quantity {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.num-units {
+    font-size: 12px;
+}
+
+.main-cart .content .total {
+    width: 60%;    
+    margin: auto;
+    text-align: left;
+}
+.wrap-contact {
+    background: #e1e1;
+    border: solid 1px #ccc;
+    padding: 2% 15px;
+    border-radius: 5px;
+    margin-bottom: 50px;
+}
+
+.wrap-contact .btn {
+    margin: 10px;
+}
+
+.form-group--col {
+    margin-bottom: 16px;
+}
+
+.form-control--phone {
+    display: grid;
+    grid-template-columns: 2fr 10fr;
+    grid-gap: 12px;
+}
+
+
+.content-cart--empty .rounded-circle {
+    border-radius: 50%!important;
+    background: #0ea9f4;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 40% auto 20px auto;
+}
+
+.content-cart--empty { 
+    align-items: center;    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.content-cart--empty h2 {
+    margin-bottom: 10%;
+}
+
+.phonecodes-list ul {
+    margin-left: 0;
+    padding: 0;
+    width: 50px;    
+    margin-bottom: 0;
+}
+
+.phonecodes-list.active ul {    
+    max-height: 200px; 
+    overflow-y: scroll;   
+}
+
+.phonecodes-list li {
+    list-style: none;
+    margin-bottom: 5px;
+}
+
+.phonecodes-list span {
+    color: #000;
+    font-size: 12px;
+    margin: 2px auto;
+}
+
+.phonecodes-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (min-width: 992px) {
+    .wrapp-cart .product {
+        display: grid;
+        grid-template-columns: 140px 6fr;
+        width: 60%; 
+    }
+ }
+
+ @media (min-width: 768px) {
+
+    .form-group--col {
+        display: grid;
+        grid-template-columns: 6fr 6fr;
+        grid-gap: 16px;
+    }
+
+ }
+
+ @media (max-width: 576px) {
+
+    .wrap-contact .btn {
+        width: 100%;
+    }
+ }
+ 
+
+
+ 
+

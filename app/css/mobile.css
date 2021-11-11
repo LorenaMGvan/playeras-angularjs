@@ -1,0 +1,6 @@
+/* medias querys */
+@media (min-width: 992px) {
+    .content {
+        width: 970px;       
+    }
+ }
